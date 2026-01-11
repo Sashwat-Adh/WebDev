@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+</head>
+<body>
+
+    <h2>Feedback Form</h2>
+
+    <form action="#" method="post">
+
+        <label for="fullName">Full Name:</label><br>
+        <input type="text" id="fullName" name="fullName" required minlength="3" maxlength="50"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <p>How satisfied are you?</p>
+        <input type="radio" id="very" name="satisfaction" value="very-satisfied" required>
+        <label for="very">Very Satisfied</label><br>
+        <input type="radio" id="satisfied" name="satisfaction" value="satisfied">
+        <label for="satisfied">Satisfied</label><br>
+        <input type="radio" id="neutral" name="satisfaction" value="neutral">
+        <label for="neutral">Neutral</label><br>
+        <input type="radio" id="unsatisfied" name="satisfaction" value="unsatisfied">
+        <label for="unsatisfied">Unsatisfied</label><br><br>
+
+        <p>Interests:</p>
+        <input type="checkbox" id="web" name="interests" value="web-development">
+        <label for="web">Web Development</label><br>
+        <input type="checkbox" id="mobile" name="interests" value="mobile-development">
+        <label for="mobile">Mobile Development</label><br>
+        <input type="checkbox" id="ai" name="interests" value="ai-machine-learning">
+        <label for="ai">AI & Machine Learning</label><br><br>
+
+        <label for="country">Country:</label><br>
+        <select id="country" name="country" required>
+            <option value="">-- Select --</option>
+            <option value="NP">Nepal</option>
+            <option value="IN">India</option>
+            <option value="US">United States</option>
+        </select><br><br>
+
+        <label for="feedback">Your feedback:</label><br>
+        <textarea id="feedback" name="feedback" rows="5" required minlength="10"></textarea><br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <p><a href="index.html">Back to Home</a></p>
+
+</body>
+</html>
