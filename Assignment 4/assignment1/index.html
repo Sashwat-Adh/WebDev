@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JavaScript Practice - Basic Exercises</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+            background-color: #f8f9fa;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        pre {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        .section {
+            margin-bottom: 50px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        button {
+            padding: 10px 18px;
+            margin: 8px 6px 8px 0;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+        #output {
+            min-height: 100px;
+            margin-top: 15px;
+            padding: 15px;
+            background: #ecf0f1;
+            border-radius: 6px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Basic Exercises</h1>
+
+    <div class="section">
+        <h2>1. Even or Odd Checker</h2>
+        <input type="number" id="numInput" placeholder="Enter a number">
+        <button onclick="checkEvenOdd()">Check</button>
+        <div id="evenOddResult"></div>
+    </div>
+
+    <div class="section">
+        <h2>2. Multiplication Table (for number 5)</h2>
+        <button onclick="printMultiplicationTable(5)">Show Table of 5</button>
+        <pre id="tableOutput"></pre>
+    </div>
+
+    <div class="section">
+        <h2>3. FizzBuzz (1 to 20)</h2>
+        <button onclick="runFizzBuzz()">Run FizzBuzz</button>
+        <pre id="fizzBuzzOutput"></pre>
+    </div>
+
+    <div class="section">
+        <h2>4. Right-Angled Triangle (n = 5)</h2>
+        <button onclick="printTriangle(5)">Show Triangle</button>
+        <pre id="triangleOutput"></pre>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

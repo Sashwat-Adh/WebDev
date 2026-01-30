@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dynamic Color Changer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background-color: #f0f2f5;
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 40px;
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    #colorBox {
+      width: 320px;
+      height: 220px;
+      margin: 30px auto;
+      border-radius: 12px;
+      border: 2px solid #ddd;
+      background-color: #3498db;   /* initial color */
+      transition: background-color 0.4s ease;
+      box-shadow: inset 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    input[type="color"] {
+      width: 80px;
+      height: 50px;
+      padding: 4px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button {
+      padding: 12px 28px;
+      font-size: 16px;
+      background-color: #7f8c8d;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    button:hover {
+      background-color: #95a5a6;
+      transform: translateY(-2px);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    .reset-btn {
+      background-color: #e74c3c;
+    }
+
+    .reset-btn:hover {
+      background-color: #c0392b;
+    }
+
+    p.instruction {
+      color: #7f8c8d;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Dynamic Color Changer</h1>
+
+  <div class="container">
+    <div id="colorBox"></div>
+
+    <div class="controls">
+      <label>
+        Pick a color: 
+        <input type="color" id="colorPicker" value="#3498db">
+      </label>
+
+      <button class="reset-btn" id="resetBtn">Reset to Default</button>
+    </div>
+
+    <p class="instruction">Try changing the color using the picker ↑</p>
+  </div>
+
+  <script>
+    const colorBox = document.getElementById('colorBox');
+    const colorPicker = document.getElementById('colorPicker');
+    const resetBtn = document.getElementById('resetBtn');
+
+    // Default color
+    const defaultColor = '#3498db';
+
+    // Change color when picker value changes
+    colorPicker.addEventListener('input', (e) => {
+      colorBox.style.backgroundColor = e.target.value;
+    });
+
+    // Reset to default color
+    resetBtn.addEventListener('click', () => {
+      colorBox.style.backgroundColor = defaultColor;
+      colorPicker.value = defaultColor;   // also reset the picker
+    });
+
+    // Optional: also change color when user presses Enter or loses focus
+    colorPicker.addEventListener('change', (e) => {
+      colorBox.style.backgroundColor = e.target.value;
+    });
+  </script>
+
+</body>
+</html>
